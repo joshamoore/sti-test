@@ -1,0 +1,76 @@
+$primary: #82BC41;
+$primary-accent: #447f00;
+$sec-web: #66645E;
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+body {
+    font-family: 'Lato', sans-serif;
+    color: #66645E;
+}
+#logo {
+    padding: 10px;
+    width: 100%;
+    background-color: $primary;
+    border-bottom: 5px solid $primary-accent;
+}
+/* Using 2 screen sizes */
+#toggle-button {
+    /* Shared properties */
+    background-color: $primary; 
+    color:#FFFFFF;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 30px;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+#toggle-button:hover {
+    background-color:$primary-accent;
+}
+#widget-main {
+    background-color: #EAE6DA;
+}
+#widget-content-wrap {
+    padding: 10px;
+    overflow: hidden;
+}
+#jd-img {
+    border-radius: 30px;
+}
+@media (max-width: 768px) {
+    /* Smaller screens */
+    #toggle-button {
+        width: auto;
+    }
+    #widget-main {
+        width: auto;
+    }
+    #jd-img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+@media (min-width: 769px) {
+    #toggle-button {
+        width: 138px;
+        float: right;
+        overflow: hidden;
+    }
+    #widget-main {
+        width: 345px; /* Based on wireframe sizing + padding = 365px*/
+    }
+    #jd-img {
+        max-width: 80%;
+        display: block;
+        margin: auto;
+    }
+}
+
+#patient-desc {
+    list-style:none;
+    padding-left:0;
+}

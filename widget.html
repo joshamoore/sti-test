@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" ng-app="STIApp">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Josh's Submission</title>
+    <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script type="text/javascript" src="js/sti-apps.js"></script>
+
+</head>
+<body>
+<!-- Assuming widget width is 365px (taken from wireframe sizing), but will resize on smaller devices -->
+<div id="widget-main" ng-controller="mainController as stiApp">
+    <div id="logo">
+        <img src="img/sti_logo.svg" alt="STI">
+    </div>
+    <div id="widget-content-wrap">
+        <div id="title">
+            <!-- Side A = Overview, Side B = Details -->
+            <h3 ng-if="stiApp.getStatus()==false">Overview</h3>
+            <h3 ng-if="stiApp.getStatus()==true">Details</h3>
+        </div>
+        <div id="content">
+           
+            <div id="content-side-a" ng-if="stiApp.getStatus()==false">
+                <ul id="patient-desc">
+                    <li>First Name: Jane</li>
+                    <li>Last Name: Doe</li>
+                    <li>Gender: Female</li>
+                    <li>Occupation: Retired Age: 70</li>
+                    <li>Location: Toronto, Ontario</li>
+                    <li>Medications: CRESTOR</li>
+                </ul>
+                <img src="img/janedoe.jpg" alt="Jane Doe" id="jd-img">
+                <h4>Summary:</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus diam massa, consequat in dui
+                sed, aliquam placerat nibh. Fusce in ultrices lectus, convallis tincidunt elit. Curabitur faucibus
+                sem vitae ex egestas iaculis. Suspendisse eget tempor nulla. Cras et convallis urna, sed aliquam
+                metus. Pellentesque consequat finibus turpis quis semper. Curabitur bibendum sem ut massa
+                tincidunt, at dictum mi convallis. Duis et ipsum at leo pulvinar laoreet sit amet id ligula.
+                Pellentesque in libero convallis augue condimentum aliquet eu a elit. Sed eu diam rhoncus,
+                ullamcorper dui nec, pellentesque massa. Curabitur vestibulum volutpat euismod. Aliquam leo
+                neque, laoreet quis tellus non, ultrices posuere metus.</p>
+            </div> 
+
+            <div id="content-side-b" ng-if="stiApp.getStatus()==true">
+                <p>Lorem    ipsum   dolor   sit amet,   consectetur adipiscing  elit.   Aliquam ornare  nunc    quis    ipsum   
+                semper, ac  vehicula    odio    rhoncus.    Praesent    dictum  erat    mauris, eget    sollicitudin    odio    
+                malesuada   euismod.    Aliquam ut  ligula  ante.   Fusce   metus   metus,  consequat   eget    condimentum 
+                et, gravida ut  lectus. Pellentesque    habitant    morbi   tristique   senectus    et  netus   et  malesuada   
+                fames   ac  turpis  egestas.    Aliquam erat    volutpat.   Sed lacinia,    lacus   efficitur   gravida bibendum,   
+                augue   est egestas risus,  eget    rhoncus arcu    dui vehicula    ex. Suspendisse potenti.    Curabitur in    
+                ultricies   lorem.  Etiam   ullamcorper tortor  ut  lacus   porttitor,  quis    tempus  dui suscipit.   Donec   quis    
+                ex  nec metus   varius  gravida.    Fusce   bibendum    sagittis    fringilla.  Vestibulum  ante    felis,  aliquam 
+                quis    nulla   at, ullamcorper finibus massa.</p>
+                <p>Nunc eget    dictum nisi.    Ut  sagittis    efficitur   mauris  et  maximus.    Aenean  pulvinar    dui at  turpis  
+                fermentum   fermentum.  Nam sed quam    tellus. Cras    sit amet    elit    non massa   viverra tristique   ut  
+                eu  augue.  Cras    laoreet in  metus   quis    fringilla.  Fusce   sapien  lorem,  porttitor   vel eleifend    non,    
+                gravida id  libero. Praesent    hendrerit   rutrum  volutpat.   Phasellus   ut  suscipit    quam,   et  dapibus 
+                turpis. Proin   a   sapien  erat.   Maecenas    sollicitudin    sollicitudin    enim    vel mollis. Donec   ac  porta   
+                nulla.  Nullam  eget    elit    ut  lacus   commodo eleifend.   Maecenas    vel sollicitudin    lorem.</p>
+            </div>
+
+            <div id="toggle-button" ng-click="stiApp.toggle('')">
+                <h4>Toggle</h4>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
