@@ -1,5 +1,5 @@
 # Description
-This application uses AngularJS, SASS, Bootstrap.
+This application uses AngularJS, SASS, Bootstrap and Google Fonts. The layout is based off of the wireframe.
 
 # Instructions
 
