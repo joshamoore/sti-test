@@ -1,17 +1,17 @@
-# Description
+## Description
 This application uses AngularJS, SASS, Bootstrap and Google Fonts. The layout is based off of the wireframe.
 
-# Instructions
+## Instructions
 
 - All files are already in proper directories
 - /scss/style.scss is available for  
 - Open up widget.html in your browser
 
-# Notes
+## Notes
 - Application was developed according to dimensions of wireframe
 - Site will resize on screens 768px wide and lower
 
-# Resources
+## Resources
 
 * [AngularJS]
 * [Bootstrap]
