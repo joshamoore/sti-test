@@ -1,6 +1,7 @@
 $primary: #82BC41;
 $primary-accent: #447f00;
 $sec-web: #66645E;
+$width:345px;  /* Default widget width is 345px + 10px padding = 365px, but can be easily changed here */
 
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 body {
@@ -61,7 +62,7 @@ body {
         overflow: hidden;
     }
     #widget-main {
-        width: 345px; /* Based on wireframe sizing + padding = 365px*/
+        width: $width; /* Based on wireframe sizing + padding = 365px*/
     }
     #jd-img {
         max-width: 80%;
