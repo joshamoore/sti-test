@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" ng-app="STIApp">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Josh's Submission - MVC</title>
+    <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script type="text/javascript" src="js/sti-apps.js"></script>
+
+</head>
+<body>
+<!-- Assuming widget width is 365px (taken from wireframe sizing), but will resize on smaller devices -->
+<div id="widget-main" ng-controller="mainController as stiApp">
+    <div id="logo">
+        <img src="img/sti_logo.svg" alt="STI">
+    </div>
+    <div id="widget-content-wrap">
+        <div id="title">
+            <!-- Side A = Overview, Side B = Details -->
+            <h3 ng-if="stiApp.getStatus()==false">Overview</h3>
+            <h3 ng-if="stiApp.getStatus()==true">Details</h3>
+        </div>
+        <div id="content">
+            <div id="content-side-a" ng-include="'views/side-a.html'" ng-if="stiApp.getStatus()==false"></div> 
+
+            <div id="content-side-b" ng-include="'views/side-b.html'" ng-if="stiApp.getStatus()==true" ></div>
+
+            <div id="toggle-button" ng-click="stiApp.toggle('')">
+                <h4>Toggle</h4>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

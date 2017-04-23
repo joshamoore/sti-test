@@ -1,11 +1,20 @@
 ## Description
-This application uses AngularJS, SASS, Bootstrap and Google Fonts. The layout is based off of the wireframe.
+This application uses AngularJS, SASS, Bootstrap and Google Fonts. The layout is based off of the wireframe. There are 2 versions available, one with views and one without.
 
 ## Instructions
-
+#### Option 1 - No views:
 - All files are already in proper directories
 - /scss/style.scss is available for modifying variables
 - Open up widget.html in your browser
+
+#### Option 2 - With views:
+- HTTP Server required (WAMP available at http://www.wampserver.com/en/)
+- Create a local directory
+- Add sti-test folder to directory
+- Connect to sti-test/widget-mvc.html
+
+#### Option 3:
+I've hosted it on my personal space at http://web.cs.dal.ca/~josh/sti-test/widget-mvc.html, you can view the MVC version live here.
 
 ## Notes
 - Application was developed according to dimensions of wireframe
